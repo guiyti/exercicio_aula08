@@ -1,4 +1,6 @@
 // Função para converter um número decimal em binário
+console.log('script carregado')
+
     function decimalToBinary(decimal) {
       let binario = '';
       while (decimal > 0) {
