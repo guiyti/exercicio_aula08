@@ -1,7 +1,7 @@
 // Função para converter um número decimal em binário
 console.log('script carregado')
 
-    function decimalBinario(decimal) {
+    function decimalToBinary(decimal) {
       let binario = '';
       while (decimal > 0) {
         binario = (decimal % 2) + binario;
@@ -14,7 +14,7 @@ console.log('script carregado')
     }
 
     // Função para converter um número binário em decimal
-    function binarioDecimal(binario) {
+    function binaryToDecimal(binario) {
       let decimal = 0;
       for (let i = 0; i < binario.length; i++) {
         const bit = parseInt(binario.charAt(binario.length - 1 - i));
@@ -24,19 +24,19 @@ console.log('script carregado')
     }
 
     // Função para lidar com a conversão de decimal para binário
-    function handleDecimalbinario() {
+    function handleDecimalToBinary() {
       const decimalInput = document.getElementById("decimal").value;
-      const resultado = decimalBinario(decimalInput);
-      document.getElementById("binario").value = resultado;
+      const resultado = decimalToBinary(decimalInput);
+      document.getElementById("binary").value = resultado;
     }
 
     // Função para lidar com a conversão de binário para decimal
-    function handleBinarioDecimal() {
-      const binarioInput = document.getElementById("binario").value;
-      const resultado = binarioDecimal(binarioInput);
+    function handleBinaryToDecimal() {
+      const binaryInput = document.getElementById("binary").value;
+      const resultado = binaryToDecimal(binaryInput);
       document.getElementById("decimal").value = resultado;
     }
 
     // Adiciona eventos aos botões de conversão
-    document.getElementById("btnDecimalBinario").addEventListener("click", handleDecimalbinario);
-    document.getElementById("btnBinarioDecimal").addEventListener("click", handleBinarioDecimal);
+    document.getElementById("btnDecimalToBinary").addEventListener("click", handleDecimalToBinary);
+    document.getElementById("btnBinaryToDecimal").addEventListener("click", handleBinaryToDecimal);
